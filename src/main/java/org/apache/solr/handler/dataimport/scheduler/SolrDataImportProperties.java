@@ -29,7 +29,7 @@ public class SolrDataImportProperties {
 	private static final Logger logger = LoggerFactory.getLogger(SolrDataImportProperties.class);
 
     public void loadProperties(boolean force) {
-        try (SolrResourceLoader loader = new SolrResourceLoader((String) null)) {
+        try (SolrResourceLoader loader = new SolrResourceLoader()) {
 
             logger.info("Instance dir = {}", loader.getInstanceDir());
             String configDir = loader.getConfigDir();
